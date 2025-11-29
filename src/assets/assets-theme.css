@@ -1,0 +1,32 @@
+:root {
+    --theme-primary: rgb(255, 0, 0);
+    --theme-glow: rgba(255, 71, 87, 1);
+    --theme-hover: rgba(255, 62, 31);
+
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb: #ff4757;
+    --scrollbar-thumb-hover: #ff6b81;
+
+    /* Page Element */
+    --header-bg: rgba(255, 255, 255, .85);
+    --header-border: rgba(240, 240, 240, .6);
+
+    /* UI Element */
+    --ui-glasscard-bg: rgba(255, 255, 255, .25);
+    --ui-glasscard-border: rgba(255, 255, 255, .18);
+    --ui-glasscard-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    --ui-glasscard-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+    
+    /* News Component Specific */
+    --news-tag-update: #ff4757;
+    --news-tag-artist: #ff6b81;
+    --news-tag-awards: #ff9f43;
+    --news-tag-contest: #2ed573;
+    --news-tag-event: #1e90ff;
+    --news-tag-trending: #5352ed;
+    --news-tag-viral: #ff6348;
+    --news-tag-community: #747d8c;
+}

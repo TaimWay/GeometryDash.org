@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.glass-card {
+  background: var(--ui-glasscard-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--ui-glasscard-border);
+  border-radius: 16px;
+  box-shadow: var(--ui-glasscard-shadow);
+  transition: .3s ease;
+  padding: 30px;
+}
+
+.glass-card:hover {
+  box-shadow: var(--ui-glasscard-shadow-hover);
+}
