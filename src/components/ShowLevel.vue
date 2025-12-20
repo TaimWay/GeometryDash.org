@@ -78,6 +78,7 @@
                         By {{ level.author }}
                     </div>
                 </div>
+                <img src="/resource/small_info.png" alt="?" class="button info" @click="_open_info_all_win32">
                 <div class="description">
                     {{ level.description }}
                 </div>
@@ -85,19 +86,39 @@
                     Version: {{ level.version }} ID: <span class="button" @click="copyTextToClipboard(level.id)"> {{
                         level.id }} </span>
                 </div>
+
+                <Windows32 ref="levelinfo_all_win32">
+                    <div class="w33">
+                        <!-- Slot for custom content -->
+                        <slot>
+                            <!-- Default content if no slot provided -->
+                            <h2 class="window-title">All Level Information</h2>
+                            <div class="window-body">
+                                <p>Name: {{ level.name }}</p>
+                                <p>ID: {{ level.id }}</p>
+                                <p>Author: {{ level.author }}</p>
+                                <p>Description: {{ level.description }}</p>
+                                <p>Version: {{ level.version }}</p>
+                                <p>Downloads: {{ level.download }}</p>
+                                <p>Likes: {{ level.likes }}</p>
+                                <p>Length: {{ level.length }}</p>
+                                <p v-if=_check_orbs(level.orbs)>Orbs: {{ level.orbs }}</p>
+                                <p>Difficulty: {{ level.difficulty }} ({{ level.difficulty_number }})</p>
+                                <p>Stars: {{ level.stars }}</p>
+                                <p>Quality: {{ level.quality }}</p>
+                            </div>
+                        </slot>
+                    </div>
+                </Windows32>
+
             </div>
         </Windows32>
         <Windows32 ref="muscinfo_win32">
-            <div class="w33">
-                <!-- Slot for custom content -->
-                <slot>
-                    <!-- Default content if no slot provided -->
-                    <h2 class="window-title">{{ level.music.getAllMusic()[0].name }}</h2>
-                    <div class="window-body">
-                        <p>This is the window content area</p>
-                        <p>You can add any content you want to display here</p>
-                    </div>
-                </slot>
+            <div class="w34">
+                <h1 class="text-apply">{{ level.music.getAllMusic()[0].name }}</h1>
+                <div class="gold-text">By {{ level.music.getAllMusic()[0].author }}</div>
+                <button @click="_jumpMusicURL(level.music.getAllMusic()[0].id)" class="button text-apply">Download Soundtrack</button>
+                <div class="cls">SongID: {{ level.music.getAllMusic()[0].id }}</div>
             </div>
         </Windows32>
     </div>
@@ -124,6 +145,7 @@ import { ref } from 'vue'
 
 const levelinfo_win32 = ref(null);
 const muscinfo_win32 = ref(null);
+const levelinfo_all_win32 = ref(null);
 
 const _show_bg = (id) => {
     return `background-image: url('https://levelthumbs.prevter.me/thumbnail/${id}')`
@@ -194,6 +216,15 @@ const _open_info_win32 = () => {
 const _open_music_info_win32 = () => {
     muscinfo_win32.value.open();
 };
+
+const _open_info_all_win32 = () => {
+    levelinfo_all_win32.value.open();
+};
+
+const _jumpMusicURL = (id) => {
+    let website = `https://www.newgrounds.com/audio/listen/${id}`;
+    window.open(website, '_blank');
+}
 
 </script>
 
@@ -412,6 +443,12 @@ const _open_music_info_win32 = () => {
     font-size: 2.8rem;
 }
 
+.w32 .info {
+    position: absolute;
+    right: 11%;
+    width: 64px;
+}
+
 .w32 .description {
     background-color: rgb(0, 0, 0, 0.5);
     color: white;
@@ -462,30 +499,42 @@ const _open_music_info_win32 = () => {
     font-size: 1.8rem;
     text-align: center;
 }
+</style>
 
-/* Animation styles */
-.window-slide-enter-active,
-.window-slide-leave-active {
-    transition: all 0.4s ease;
+<style scoped>
+.w34 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95%;
+    justify-content: center;
 }
-
-.window-slide-enter-from {
-    opacity: 0;
-    transform: translateY(-100%);
+.w34 .text-apply {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 20px;
 }
-
-.window-slide-enter-to {
-    opacity: 1;
-    transform: translateY(0);
+.w34 .gold-text {
+    font-size: 3rem;
 }
-
-.window-slide-leave-from {
-    opacity: 1;
-    transform: translateY(0);
+.w34 button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* background-image: url('/resource/button_bg1.png'); */
+    background: none;
+    font-family: Pusab, Arial;
+    outline: none;
+    font-size: 3rem !important;
+    margin-top: auto;
 }
-
-.window-slide-leave-to {
-    opacity: 0;
-    transform: translateY(-100%);
+.w34 .cls {
+    font-size: 2rem;
+    color: white;
+    margin-top: auto;
 }
 </style>
