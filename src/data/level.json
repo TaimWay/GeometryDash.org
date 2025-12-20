@@ -1,0 +1,19 @@
+{
+    "ORBS": [0, 0, 50, 75, 125, 175, 225, 275, 350, 425, 500],
+    "LENGTHS": ["Tiny", "Short", "Medium", "Long", "XL"],
+    "DIFFICULTIES": {
+        "0": "NA",
+        "1": "Auto",
+        "2": "Easy",
+        "3": "Normal",
+        "4": "Hard",
+        "5": "Harder",
+        "6": "Insane",
+        "7": "Demon",
+        "8": "Easy Demon",
+        "9": "Medium Demon",
+        "10": "Hard Demon",
+        "11": "Insane Demon",
+        "12": "Extreme Demon"
+    }
+}
