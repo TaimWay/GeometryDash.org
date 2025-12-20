@@ -36,10 +36,6 @@
                     (demon) levels.
                 </span>
             </div>
-            <div class="news page">
-                    <News :news-data="newsJsonData" title="Geometry News" :last-updated="lastUpdateTime"
-                        @action-triggered="handleNewsAction"></News>
-            </div>
         </main>
     </div>
 </template>
@@ -81,7 +77,6 @@ main .introduction span {
 <script setup>
 import { ref } from 'vue'
 import Gallery from '../../components/Gallery.vue'
-import News from '../../components/News.vue'
 
 // Gallery data
 const galleryData = [
@@ -142,114 +137,4 @@ const galleryData = [
         description: 'A greate game of RobTop Games.'
     }
 ]
-</script>
-
-<script>
-import GeometryDashNews from '../../components/News.vue'
-
-export default {
-    components: {
-        GeometryDashNews
-    },
-    data() {
-        return {
-            lastUpdateTime: new Date('2025-11-30'),
-            newsJsonData: {
-                sections: [
-                    {
-                        id: 1,
-                        title: "Major Update and Release",
-                        icon: "🚀",
-                        priority: "high",
-                        columns: 3,
-                        items: [
-                            {
-                                id: 1,
-                                type: "update",
-                                tag: "update",
-                                title: "Game Update 2.207",
-                                date: "Published on: November 16, 2025",
-                                content: "RobTop Games has released the latest game update version 2.207, bringing new features and improvements to the game.",
-                                highlights: ["New Feature", "Performance Optimization"]
-                            },
-                            {
-                                id: 2,
-                                type: "artist",
-                                tag: "artist",
-                                title: "New Official Artist: TOKYO MACHINE + CHOMPO",
-                                date: "Published on: November 29, 2025",
-                                content: "The 11th official artist has been revealed, with music from TOKYO MACHINE + CHOMPO to be added to the official tracklist.",
-                                highlights: ["New music", "Tracklist expansion"]
-                            },
-                            {
-                                id: 3,
-                                type: "awards",
-                                tag: "awards",
-                                title: "Geometry Dash 2024 Award Winners",
-                                date: "Published on: November 16, 2025",
-                                content: "The winners of the 2024 Geometry Dash awards have been announced, celebrating the best creators and content in the community."
-                            }
-                        ]
-                    },
-                    {
-                        id: 2,
-                        title: "Official Competitions and Events",
-                        icon: "🏆",
-                        priority: "medium",
-                        columns: 2,
-                        items: [
-                            {
-                                id: 4,
-                                type: "contest",
-                                tag: "contest",
-                                title: "Geometry Dash Random Challenge",
-                                date: "Published on: November 22, 2025",
-                                content: "A new official competition has been announced, challenging creators to design levels for random challenges."
-                            },
-                            {
-                                id: 5,
-                                type: "contest",
-                                tag: "contest",
-                                title: "Space Challenge Winner",
-                                date: "Published on: November 16, 2025",
-                                content: "The winner of the Space Challenge has been announced, showcasing the best space-themed community level.",
-                            }
-                        ]
-                    },
-                    {
-                        id: 3,
-                        title: "Community Hotspots",
-                        icon: "💬",
-                        priority: "normal",
-                        columns: 2,
-                        items: [
-                            {
-                                id: 6,
-                                type: "trending",
-                                tag: "trending",
-                                title: "AI-Generated Fake Game Videos",
-                                content: "The community is discussing the rise of realistic but fake Geometry Dash game videos created using AI-generated content.",
-                                highlights: ["AI Generated", "Fake Content"]
-                            },
-                            {
-                                id: 7,
-                                type: "viral",
-                                tag: "viral",
-                                title: "Extremely High Difficulty Platform Level",
-                                content: "A new community-made platform level has gained attention due to its extremely high difficulty, with some claiming it might take 27 years to complete.",
-                                highlights: ["Extremely High Difficulty", "27 Years to Complete"]
-                            }
-                        ]
-                    }
-                ]
-            }
-        }
-    },
-    methods: {
-        handleNewsAction(action) {
-            console.log('新闻操作触发:', action);
-            // 处理自定义操作
-        }
-    }
-}
 </script>

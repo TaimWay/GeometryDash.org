@@ -10,19 +10,26 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        meta: { title: 'Home | APlcexenicesetrl' },
         component: () => import('./views/Home/index.vue')
     },
     {
         path: '/about',
         name: 'About',
-        meta: { title: 'About Us | APlcexenicesetrl' },
         component: () => import('./views/About/index.vue')
+    },
+    {
+        path: '/level',
+        name: 'Level',
+        component: () => import('./views/Game/level.vue')
+    },
+    {
+        path: '/a',
+        name: 'A',
+        component: () => import('./views/Game/audio.vue')
     },
     {
         path: '/:catchAll(.*)',
         name: 'NotFound',
-        meta: { title: '404 Page Not Found | Apps APlcexenicesetrl' },
         component: () => import('./views/Error/404.vue')
     }
 ]

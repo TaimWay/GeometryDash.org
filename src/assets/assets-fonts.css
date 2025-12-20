@@ -2,3 +2,8 @@
     font-family: 'CascadiaCode';
     src: url('./fonts/CASCADIACODE.TTF');
 }
+
+@font-face {
+    font-family: 'Pusab';
+    src: url('./fonts/Pusab.ttf');
+}

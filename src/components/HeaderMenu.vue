@@ -2,7 +2,7 @@
   <nav class="glass-navbar text-no-select">
     <div class="nav-container">
       <div class="nav-logo">
-        <h2>Geometry Dash.org</h2>
+        <h2>Geometry Dash</h2>
       </div>
       
       <ul class="nav-menu">
