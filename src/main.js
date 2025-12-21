@@ -23,9 +23,14 @@ const routes = [
         component: () => import('./views/Game/level.vue')
     },
     {
-        path: '/a',
-        name: 'A',
-        component: () => import('./views/Game/audio.vue')
+        path: '/search',
+        name: 'Search',
+        component: () => import('./views/Game/search.vue')
+    },
+    {
+        path: '/online-level',
+        name: 'OnlineLevel',
+        component: () => import('./views/Game/online-level.vue')
     },
     {
         path: '/:catchAll(.*)',
