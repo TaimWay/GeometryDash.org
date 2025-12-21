@@ -52,24 +52,6 @@
             <!-- <Audio :playList=audioList :stayWay="true" v-model:currentIndex="currentAudioIndex">
             </Audio> -->
         </div>
-        <!-- <div class="level-info">
-            <div class="info-box">
-                <div class="funct">
-                    <img src="/resource/back.png" alt="?" class="button">
-                </div>
-                <div class="main">
-                    <div class="title title-text text-apply">{{ level.name }}</div>
-                    <div class="user">
-                        <div class="name gold-text text-apply">
-                            By {{ level.author }}
-                        </div>
-                    </div>
-                    <div class="description">
-                        {{ level.description }}
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <Windows32 ref="levelinfo_win32">
             <div class="w32">
                 <div class="title title-text text-apply">{{ level.name }}</div>
@@ -110,7 +92,6 @@
                         </slot>
                     </div>
                 </Windows32>
-
             </div>
         </Windows32>
         <Windows32 ref="muscinfo_win32">
@@ -140,7 +121,6 @@ export default {
 import Level from '../utils/Level';
 import Windows32 from './Game_Windows.vue';
 import { _GetDifficultiesResourcePath, copyTextToClipboard, Unfinished } from '../utils/utils';
-
 import { ref } from 'vue'
 
 const levelinfo_win32 = ref(null);
