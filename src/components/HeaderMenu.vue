@@ -10,7 +10,10 @@
           <a href="/" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/about" class="nav-link">About</a>
+          <a href="/community" class="nav-link">Community</a>
+        </li>
+        <li class="nav-i">
+          <a href="/search" class="nav-link">Game</a>
         </li>
       </ul>
     </div>
