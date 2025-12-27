@@ -18,25 +18,32 @@
             <div class="introduction page">
                 <h1>Geometry Dash</h1>
                 <div class="title-underline"></div>
-                <span>Geometry Dash is a rhythm-based platforming video game developed by Robert Topala (Robert Topala,
-                    known as RobTop in the game) and published by RobTop Games. The game was released on August 13,
-                    2013, for iOS and Android platforms, then on June 12 of the following year for Windows Phone, and
-                    subsequently on December 22 for the Steam platform. It can be played on computers (Windows, macOS)
-                    and mobile devices (based on/natively on Android systems, iOS).
-                </span>
-                <span>In the game, players need to control a geometric icon to dodge obstacles in an automatically
-                    scrolling level—just a tap on the screen/mouse makes the icon jump. The game also features a
-                    platform jumping mode, where players can use the left, right, and up keys to control the geometric
-                    icon to walk and jump around the map.
-                </span>
-                <span>
-                    The game includes 26 main levels (24 auto-scrolling levels and 4 platform jumping levels). While
-                    players don't need to complete one level to unlock the next, each level gradually increases in
-                    difficulty. These levels range from Easy (easy) to Insane (insane), with some even being Demon
-                    (demon) levels.
-                </span>
+                <br>
+                <div class="text-box">
+                    <span>Geometry Dash is a rhythm-based platforming video game developed by Robert Topala (Robert Topala,
+                        known as RobTop in the game) and published by RobTop Games. The game was released on August 13,
+                        2013, for iOS and Android platforms, then on June 12 of the following year for Windows Phone, and
+                        subsequently on December 22 for the Steam platform. It can be played on computers (Windows, macOS)
+                        and mobile devices (based on/natively on Android systems, iOS).
+                    </span>
+                    <span>In the game, players need to control a geometric icon to dodge obstacles in an automatically
+                        scrolling level—just a tap on the screen/mouse makes the icon jump. The game also features a
+                        platform jumping mode, where players can use the left, right, and up keys to control the geometric
+                        icon to walk and jump around the map.
+                    </span>
+                    <span>
+                        The game includes 26 main levels (24 auto-scrolling levels and 4 platform jumping levels). While
+                        players don't need to complete one level to unlock the next, each level gradually increases in
+                        difficulty. These levels range from Easy to Insane, with some even being Demon levels.
+                    </span>
+                </div>
             </div>
         </main>
+
+        <footer>
+            <span>© 2026 Geometry Dash.org All rights reserved.</span>
+            <a href="/about" class="link">About Geometry Dash.org</a>
+        </footer>
     </div>
 </template>
 
@@ -71,6 +78,30 @@ main .title-underline {
 main .introduction span {
     margin-top: 20px;
     color: var(--text-secondary);
+    max-width: 1200px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-top: 1px solid var(--header-border);
+    margin-top: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--theme-hover);
+    text-shadow: 0 0 10px var(--theme-glow);
 }
 </style>
 
