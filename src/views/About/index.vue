@@ -72,7 +72,7 @@
 
           <section class="copyright-section">
             <div class="copyright-card glass-card">
-              <p>GeometryDash.org, Copyright (C) CNT Development Team. 2026.</p>
+              <p>GeometryDash.org, Copyright (C) TaimWay. 2026.</p>
               <p>All rights reserved.</p>
               <a href="https://github.com/TaimWay/GeometryDash.org">Github Page</a>
             </div>
