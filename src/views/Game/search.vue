@@ -222,7 +222,7 @@ const performSearch = (index = null) => {
     const timer = _selec_timer_id.value.join(',');
     const star = _selec_star.value.toString();
     
-    let urlParams = `/online-list?mode=search-level&index=${index || 'none'}&filters=${filters}&timer=${timer}&star=${star}&page=1`;
+    let urlParams = `/online-level?mode=search-level&index=${index || 'none'}&filters=${filters}&timer=${timer}&star=${star}&page=1`;
     
     // Add content parameter if search box has content
     if (_input_box.value.trim()) {
@@ -237,7 +237,7 @@ const performSearch = (index = null) => {
 const performUser = () => {
     // Build URL parameters for user search
     // Format: /online-list?mode=search-user&content=TaimWay
-    const urlParams = `/online-list?mode=search-user&content=${encodeURIComponent(_input_box.value)}`;
+    const urlParams = `/online-level?mode=search-user&content=${encodeURIComponent(_input_box.value)}`;
     
     console.log("Redirecting to:", urlParams);
     // Redirect to the search results page
