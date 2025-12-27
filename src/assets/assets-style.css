@@ -1,4 +1,4 @@
-* {
+.no-select * {
   user-select: none;
 }
 
@@ -80,4 +80,31 @@ img {
     background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
+}
+
+.text-box {
+  cursor: text;
+  background-color: var(--ui-textbox-bg) !important;
+  border: 1px solid var(--ui-textbox-border) !important;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--text-primary) !important;
+  transition: .3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-box:hover {
+  box-shadow: var(--ui-textbox-shadow-hover);
+}
+
+.text-box:focus {
+  outline: none;
+  box-shadow: var(--ui-textbox-shadow-focus);
+}
+
+.text-box span:not(:last-child) {
+  margin-bottom: 20px !important;
 }
