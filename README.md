@@ -32,8 +32,8 @@ Click the release version on the previous page, download GeometryDash.org.zip, e
 Download the source code and extract it to an empty directory, start the terminal, cd into that directory, and execute the following commands:
 
 ```shell
-npm run build
 npm install
+npm run build
 ```
 
 If everything goes well, you will get a dist folder. Then create a startup script in that directory and start the server using node.
