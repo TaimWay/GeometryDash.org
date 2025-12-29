@@ -32,8 +32,8 @@ GeometryDash.org 是一个为 Geometry Dash 打造的用户网站，它创建了
 下载源代码并解压至空目录，启动终端，cd到该目录下，执行以下命令：
 
 ```shell
-npm run build
 npm install
+npm run build
 ```
 
 若一切顺利，您将获得 dist 文件夹。随后在该目录创建启动脚本，使用 node 启动服务器。
